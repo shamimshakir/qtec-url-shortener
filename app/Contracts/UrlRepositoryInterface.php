@@ -6,7 +6,7 @@ use App\Models\UrlShortener;
 
 interface UrlRepositoryInterface
 {
-    public function index();
+    public function index(int $user);
 
     public function store(array $data);
 
@@ -14,5 +14,5 @@ interface UrlRepositoryInterface
 
     public function destroy(UrlShortener $url);
 
-    public function shortUrl(string $short_url);
+    public function hitAndUpdateCount(string $short_url);
 }

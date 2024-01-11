@@ -15,19 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/', fn () => view('dashboard'))->middleware(['auth', 'verified'])->name('dashboard');
 
 // route for urls
 Route::resource('urls', UrlShorterController::class)->middleware(['auth', 'verified']);
 
-// route for get shortener url
-Route::get('{short_url}', [UrlShorterController::class, 'shortUrl'])->name('short_url')->where('short_url', '.*q\.tec.*');
+// route for hit shortener url and update visit count
+Route::get('{short_url}', [UrlShorterController::class, 'hitAndUpdateCount'])->name('short_url')->where('short_url', '.*q\.tec.*');
 
 
 Route::middleware('auth')->group(function () {
