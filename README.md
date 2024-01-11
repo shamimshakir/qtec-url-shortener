@@ -1,67 +1,60 @@
-Qtec URL Shortener
-Qtec URL Shortener is a simple yet powerful tool for shortening long URLs.
+# Qtec URL Shortener
 
-Installation
-Clone the Repository:
+Qtec URL Shortener is a laravel test purpose simple yet powerful tool for shortening long URLs.
 
-bash
-Copy code
-git clone https://github.com/shamimshakir/qtec-url-shortener.git
-cd qtec-url-shortener
-Install Dependencies:
+## Installation
 
-bash
-Copy code
-composer install
-Database Setup:
+#### 1. Clone the Repository:
 
-Create a new database for the application.
-Copy the .env.example file to .env and configure the database connection.
-Run the database migrations:
-bash
-Copy code
-php artisan migrate
-Generate Application Key:
+```bash
+ git clone https://github.com/shamimshakir/qtec-url-shortener.git
+ cd qtec-url-shortener
+```
 
-bash
-Copy code
-php artisan key:generate
-Run the Application:
+#### 2. Install Dependencies:
 
-bash
-Copy code
+```bash
+ composer install
+```
+
+#### 3. Database Setup:
+* Create a new database for the application.
+* Copy the .env.example file to .env and configure the database connection.
+* Run the database migrations:
+
+```bash
+ php artisan migrate
+```
+
+#### 4. Generate Application Key:
+```bash
+ php artisan key:generate
+```
+#### 5. Run the Application:
+```
 php artisan serve
+```
 The application will be accessible at http://localhost:8000.
 
-Usage
-Access the Application:
-Open your web browser and navigate to http://localhost:8000.
+## Usage
 
-Shorten a URL:
+#### 1. Access the Application:
+* Open your web browser and navigate to http://localhost:8000.
 
-On the homepage, enter the long URL you want to shorten.
-Click the "Shorten" button.
-Copy Shortened URL:
+#### 2. Shorten a URL:
 
-Once the URL is shortened, copy the generated short URL.
-Visit Shortened URL:
+* On the homepage, enter the long URL you want to shorten.
+* Click the "Shorten" button.
+#### 3. Copy Shortened URL:
 
-Paste the short URL into the browser to be redirected to the original long URL.
-Additional Configuration (Optional)
-Customize the application settings in the .env file.
-Explore and modify the views in the resources/views directory to match your branding.
-Troubleshooting
-If you encounter any issues during the installation, refer to the Laravel documentation or the repository's issue section for assistance.
-Contributing
-If you would like to contribute to the project, please follow the Contribution Guidelines.
+* Once the URL is shortened, copy the generated short URL.
+#### 4. Visit Shortened URL:
 
-License
-This project is licensed under the MIT License.
+* Paste the short URL into the browser to be redirected to the original long URL.
 
-Acknowledgments
-Mention any third-party libraries or resources used in your project.
-Contact
-For any questions or inquiries, feel free to contact the project maintainer:
+## Additional Configuration (Optional)
+* Customize the application settings in the .env file.
+* Explore and modify the views in the resources/views directory to match your branding.
 
-Shamim
+### shamimshakir
 Happy shortening! 🚀
